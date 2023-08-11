@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(43, 128, 239);
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin: 30px;
+    font-size: 2em;
+}
+
+section {
+    background-image: linear-gradient(to right, rgb(246, 179, 55), rgba(153, 255, 0, 0.815));
+    background-color: white;
+    font-family: system-ui;
+    font-size: 1.3em;
+    margin: auto;
+    width: 600px;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.451);
+}
+
+
+#botao, #anoDgt{
+    background-color: rgba(253, 74, 74, 0.7);
+    padding: 4px;
+    font-weight: 600;
+}
+
+footer {
+    margin: 20px;
+    color: white;
+    text-align: center;
+}

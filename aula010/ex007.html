@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples</title>
+</head>
+<body>
+    <h2> Numero 1 <input type="number" id="entrada1"> + Numero 2
+    <input type="number" id="entrada2">
+    <input type="button" id="botao" value="Soma"> 
+    </h2>
+    <h3 id="Resultado">Resultado</h3>
+    <script>
+        var clicou = document.querySelector('#botao')
+        clicou.addEventListener('click', clicar)
+        function clicar () {
+           var digitado1 = document.querySelector('#entrada1')
+           var digitado2 = document.querySelector('#entrada2')
+           var n1 = Number(digitado1.value)
+           var n2 = Number(digitado2.value)
+           var text_resultado = document.querySelector('#Resultado')
+           text_resultado.innerText =  `A soma entre ${n1} e  ${n2} é ${n1+n2}`.toUpperCase()
+           
+           digitado1.value = ''
+           digitado2.value = ''
+        }
+
+    </script>
+</body>
+</html>

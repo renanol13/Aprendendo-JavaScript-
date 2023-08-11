@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Multas</title>
+</head>
+<body>
+    <h1>Sistemas de Multas</h1>
+    <div>
+        <p>Digite a velocidade de seu carro: <input type="number" id="velcarro"></p>
+        <p>Informe a velocidade máxima da via: <input type="number" id="velmax"></p>
+        <input type="button" id="botao" value="Resultado">
+        <p id="frase"></p>
+    </div>
+    <script>
+        var  botao = document.querySelector('#botao')
+        botao.addEventListener('click', clicar)
+        function clicar() {
+            var frase = document.querySelector("#frase")
+            var velcarro = document.querySelector('#velcarro')
+            var velmax = document.querySelector('#velmax')
+            var vel_digit_car = Number(velcarro.value)
+            var vel_digit_max = Number(velmax.value)
+
+            frase.innerHTML += '<p>Resultado: </p>'
+            if (vel_digit_car > vel_digit_max ){
+                frase.innerHTML += "<p>Você está acima da velocidade máxima</p>"
+            }
+            else{
+                frase.innerHTML += '<p>Parabéns, você está dentro do limite de velocidade!!</p>'
+            }
+            velcarro.value = ''
+            velmax.value = ''
+        }
+    </script>
+</body>
+</html>

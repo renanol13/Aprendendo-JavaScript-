@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documen</title>
+    <style>
+        body {
+            background-color:rgba(1, 219, 41, 0.855) ;
+        }
+
+        main {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, 50%);
+        }
+        input {
+            height: 2em;
+        }
+
+        .largura {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <input type="number" placeholder="000" id="n1" class="largura"> +
+        <input type="number" placeholder="000"  id="n2" class="largura">
+        <input type="button" id="soma" value="soma">
+        <h2 id="resultado">===RESULTADO===</h2>
+    </main>
+
+    <script>
+        var clic = document.querySelector('#soma')
+        clic.addEventListener('click', clicar)
+
+        function clicar() {
+            var numero1 = document.querySelector('#n1')
+            var numero2 = document.querySelector('#n2')
+            var digitado1 = Number(numero1.value)
+            var digitado2 = Number(numero2.value)
+            document.querySelector('#resultado').innerText = `A soma entre ${digitado1} e ${digitado2} é ${digitado1+digitado2}`
+        }
+    </script>
+</body>
+</html>
